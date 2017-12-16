@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FoodLand</title>
+
+    <!-- Bootstrap core CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+  </head>
+
+  <body>
+    <div ng-controller = "MyLand as vm">
+        <div class="jumbotron">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><img class="logo" src="images/logo.png" height="120" width="120"></li>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="navbar-right">
+          <a href="#"><i class="bag fa fa-shopping-bag fa-2x" aria-hidden="true"></i></a>
+        </div>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+            
+          </form>
+
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    
+      <div class="container">
+        <div class="info-box">
+          <h1>Yes! Who delivers in neighborhood?</h1>
+          <form class="form-inline search-box">
+            <div class="form-group form-group-lg">
+              <input type="text" class="form-control" ng-model="vm.searchText" placeholder="Enter your zip code...">
+            </div>
+          <button type="submit" class="btn btn-success btn-lg" ng-click="vm.search()">Find Restraunt?</button>
+          </form><br>
+      
+          <div ng-if="vm.mydata != ''">
+            <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Restaurants</th>
+              <th>Location</th>
+              <th>Pin</th>
+              <th>Images</th>
+            </tr>
+            </thead>
+            <tr ng-repeat="eobj in vm.mydata | filter: vm.searchText">
+            <td><a style="color:white" href="{{eobj.link}}" target="_blank">{{eobj.name}}</td></a>
+            <td>{{eobj.location}}</td>
+            <td>{{eobj.pin}}</td>
+            <td><img src="{{eobj.image}}" height=50 width=50></td>
+            </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <h2 align="center">Features</h2>
+        <div class="col-md-4">
+          <i class="icon fa fa-clock-o fa-5x" aria-hidden="true"></i>
+          <p>No need to pick up the phone. Quick and accurate ordering is here! Enjoy a rotating selection of our best sellers, or build your own box, delivered according to your schedule.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="icon fa fa-money fa-5x" aria-hidden="true"></i>
+          <p>Get exclusive offers and save on your delivery favorites. Boost your weekday routine or create a lifestyle of feel good foods. We offer both.</p>
+       </div>
+        <div class="col-md-4">
+          <i class="icon fa fa-truck fa-5x" aria-hidden="true"></i>
+          <p>On-the-go? Check out our convenient apps for iPhone®, iPad®, and Android devices. Get the door and enjoy your food!</p>
+        </div>
+      </div>
+
+       <div class="row">
+        <h2 align="center">Reviews</h2>
+        <div class="col-md-3">
+          <img src="images/image1.jpg" style="width:200px">
+          <p>@FoodLand I love you, FoodLand! Just ordered me some grub, and I tell you, you folks make that part of my life easy. Thanks!<br><br><strong>@Alex3426</strong></p>
+        </div>
+        <div class="col-md-3">
+          <img src="images/image2.jpg" style="width:200px">
+          <p>Made my first @FoodLand order today. So great to be able to order food and not have to talk to anyone.<br><br><strong>@June1425</strong></p>
+       </div>
+        <div class="col-md-3">
+          <img src="images/image3.jpg" style="width:200px">
+          <p>Seriously, @FoodLand makes it easy for my coworkers and I to order food and get it to our office in a jiffy. FOOD!<br><br><strong>@John1992</strong></p>
+        </div>
+        <div class="col-md-3">
+          <img src="images/image4.jpg" style="width:200px">
+          <p>Shout out to @FoodLand for making my life so so easy.<br><br><strong>@Jane2468</strong></p>
+        </div>
+      </div>
+
+       </div> <!-- /container -->
+
+      <section id="about">
+        <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 align="center"><strong>About Foodland</strong></h2>
+        </div>
+        <div class="col-md-6">
+          <p>FoodLand helps you find and order food from wherever you are. How it works: you type in an address, we tell you the restaurants that deliver to that locale as well as showing you droves of pickup restaurants near you. Want to be more specific? Search by cuisine, restaurant name or menu item. We'll filter your results accordingly. When you find what you're looking for, you can place your order online or by phone, free of charge. Oh, and we also give you access to reviews, coupons, special deals and a 24/7 customer care team that tracks each order and makes sure you get exactly what you want.</p>
+       </div>
+      </div>
+    </div>
+      </section>
+    </div>
+
+      <footer id="contact">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="footer_top" align="center">
+                <h3>Want coupons, <span>love</span> notes,<br> and updates from us?</h3>
+                <p>Sign up for our newsletter</p>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-success">Subscribe</button>
+                  </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+        <div class="row">
+    <div class="col-md-3">
+        <h3 class="foodland">FoodLand</h4>
+        <ul class="foodland_list">
+    <li class="footer-cell_item">
+        <a href="#">About Us</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Restaurants Near Me</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Blog</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Owners</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Careers</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Get in touch</a>
+    </li>
+        </ul>
+    </div>
+
+    <div class="col-md-3">
+        <h3 class="cuisine">Cuisines</h4>
+        <ul class="cuisine_list">
+    <li class="footer-cell_item">
+        <a href="#">Pizza</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Chinese</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Indian</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Thai</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Sushi</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">More...</a>
+    </li>
+        </ul>
+    </div>
+
+    <div class="col-md-3">
+        <h3 class="cities">Cities</h4>
+        <ul class="cities_list">
+    <li class="footer-cell_item">
+        <a href="#">San Francisco</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Los Angeles</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">New York</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Miami</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">Chicago</a>
+    </li>
+    <li class="footer-cell_item">
+        <a href="#">More...</a>
+    </li>
+        </ul>
+    </div>
+
+            </div>
+        </div>
+    </div>
+
+      <div class="footer_bottom">
+        <div class="row" align="left">
+          <div class="col-md-6" align="center">
+          <diV class="social">
+              <span><strong>Stay Connected</strong></span>
+          </diV><br>
+          <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <a href="https://www.facebook.com/"><i style="color:#3b5998;" class="fa fa-facebook fa-stack-1x fa-inverse" aria-hidden="true"></i></a>
+          </span>
+          <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <a href="https://twitter.com/"><i style="color:#00aced;" class="fa fa-twitter fa-stack-1x fa-inverse" aria-hidden="true"></i></a>
+          </span>
+          <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <a href="https://www.instagram.com/?hl=en"><i style="color:#fb3958;" class="fa fa-instagram fa-stack-1x fa-inverse" aria-hidden="true"></i></a>
+          </span>
+          <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <a href="https://www.youtube.com/"><i style="color:#bb0000" class="fa fa-youtube fa-stack-1x fa-inverse" aria-hidden="true"></i></a>
+          </span>
+        </div>
+        <div class="col-md-6" align="center">
+          <span class="footer_bottom_right">
+              <a href="#">Privacy Policy</a>
+                &bullet;
+              <a href="#">Terms</a>
+              <p>&copy; 2017 FoodLand, Inc.</p>
+          </span>
+        </div>
+      </div>
+    </div>
+      </footer>
+ 
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

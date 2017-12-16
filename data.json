@@ -1,0 +1,79 @@
+[{	
+	"name": "Curry Heights",
+	"location": "Brooklyn, New York",
+	"pin": "11201",
+	"image": "images/curry.jpg",
+	"link": "http://www.curryheightsbrooklyn.com/"
+},{
+	"name": "The River Cafe",
+	"location": "Brooklyn, New York",
+	"pin": "11201",
+	"image": "images/river.jpg",
+	"link": "https://rivercafe.com/"
+},{
+	"name": "Hibino",
+	"location": "Brooklyn, New York",
+	"pin": "11201",
+	"image": "images/hibino.jpg",
+	"link": "https://www.hibino-brooklyn.com/"
+},{
+	"name": "Pok Pok Ny",
+	"location": "Brooklyn, New York",
+	"pin": "11201",
+	"image": "images/pok.jpg",
+	"link": "https://pokpokny.com/home"
+},{
+	"name": "Blue Ribbon Sushi",
+	"location": "Manhattan, New York",
+	"pin": "10012",
+	"image": "images/sushi.jpg",
+	"link": "https://www.blueribbonrestaurants.com/restaurants/blue-ribbon-sushi-original/"
+},{
+	"name": "Blossom",
+	"location": "Manhattan, New York",
+	"pin": "10012",
+	"image": "images/blossom.jpg",
+	"link": "http://www.blossomnyc.com/"
+},{
+	"name": "Benars",
+	"location": "Manhattan, New York",
+	"pin": "10012",
+	"image": "images/Benares.jpg",
+	"link": "http://www.benaresnyc.com/"
+},{
+	"name": "Patsy`s Italian Restaurant",
+	"location": "Manhattan, New York",
+	"pin": "10012",
+	"image": "images/patsys.jpg",
+	"link": "https://www.patsys.com/"
+},{
+	"name": "Gotham Bar and Grill",
+	"location": "Manhattan, New York",
+	"pin": "10012",
+	"image": "images/gotham.jpg",
+	"link": "https://gothambarandgrill.com/"
+},{
+	"name": "Rasoi",
+	"location": "Jersey City, New Jersey",
+	"pin": "07306",
+	"image": "images/rasoi.jpg",
+	"link": "http://rasoiindianrestaurant.com/"
+},{
+	"name": "Chutney`s",
+	"location": "Jersey City, New Jersey",
+	"pin": "07306",
+	"image": "images/Chutneys.jpg",
+	"link": "http://www.chutneys.net/"
+},{
+	"name": "Max`s",
+	"location": "Jersey City, New Jersey",
+	"pin": "07306",
+	"image": "images/max.jpg",
+	"link": "http://www.maxsrestaurantusa.com/"
+},{
+	"name": "Las Americas",
+	"location": "Jersey City, New Jersey",
+	"pin": "07306",
+	"image": "images/las.jpg",
+	"link": "http://lasamericasrest.com/"
+}]

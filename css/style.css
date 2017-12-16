@@ -1,0 +1,201 @@
+nav{
+	height: 60px;
+}
+
+.navbar{
+	margin-bottom: 0px;
+}
+
+.navbar-brand{
+	font-size: 2em;
+	margin-top: 10px;
+}
+
+.navbar li{
+	font-size: 1.5em;
+	margin-top: 10px;
+	letter-spacing: 1px;
+    word-spacing: 2px;
+	line-height: 200%;
+}
+
+.navbar li a{
+	color: white;
+}
+
+.navbar li a:hover{
+	color: #5cb85c;
+}
+
+.jumbotron{
+	margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/food.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    top:0;
+	bottom: 0;
+}
+
+h1{
+	color: white !important;
+	text-align: center;
+}
+
+h2{
+	margin-top: 30px;
+}
+
+h3{
+	letter-spacing: 1px;
+    word-spacing: 2px;	
+}
+
+.info{
+	color: white;
+}
+
+.info-box {
+	margin-top: 100px !important;
+}
+
+.info-box img{
+	height: 80px;
+	width: 80px;
+}
+
+.search-box {
+	margin-top: 30px !important;
+	margin-left: 350px !important;
+}
+
+.logo{
+	margin-right: 50px;
+	
+}
+
+.bag{
+	color: #eee;
+	margin-top: 10px;
+}
+
+.table{
+	color: white;
+	font-size: 1.5em;
+}
+
+.icon{
+    color: #e67e22;
+    margin-top: 10%;
+}
+
+.row img{
+    border-radius: 50%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+#about{
+	background-color: #eee;
+	margin-top: 20px!important;
+	padding-bottom: 20px;
+}
+
+#about p{
+	margin-top: 30px;
+}
+
+footer {
+	background-color: #333;
+	text-align: center;
+	height: 400px !important;
+}
+
+footer h3{
+	color: white;
+}
+
+.footer_top p{
+	color: #848484;
+	display:block; 
+	text-align:center;
+}
+
+.footer_top_left p{
+	color: white;
+}
+
+.col-md-3 h3{
+	color: #848484;
+}
+
+ul.foodland_list li a{
+	color: white;
+	text-align: left !important;
+	display: block;
+	letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 200%;
+}
+
+ul.cuisine_list li a{
+	color: white;
+	text-align: left !important;
+	display: block;
+	letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 200%;
+}
+
+ul.cities_list li a{
+	color: white;
+	text-align: left !important;
+	display: block;
+	letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 200%;
+}
+
+.footer_bottom{
+	border-top: 1px solid #555;
+    padding-top: 20px;
+}
+
+.social{
+	font-size: 1.5em;
+	color: white;
+}
+
+.footer_bottom_right a{
+	color: white;
+	letter-spacing: 1px;
+    word-spacing: 2px;
+	line-height: 200%;
+}
+
+.footer_bottom_right p{
+	color: white;
+}
+
+i{
+	color: black;
+}
+
+p {
+	letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 200%;
+    text-align: justify;
+}
+
+.logo{
+	border-radius: 0%;
+}
+
+@media (max-width:800px) {
+	.info-box, .form-group {
+	  width:100%;
+	}
+  }
